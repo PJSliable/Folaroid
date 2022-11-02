@@ -9,7 +9,6 @@ import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter
-@Builder
 public class IntroPersonalData {
 
     @Id

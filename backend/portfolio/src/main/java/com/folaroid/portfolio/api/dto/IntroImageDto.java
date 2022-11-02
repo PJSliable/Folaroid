@@ -17,14 +17,14 @@ public class IntroImageDto {
         private String introImageLocation;
         private Intro intro;
 
-        public IntroImage toEntity(){
-            IntroImage introImage = IntroImage.builder()
-                    .introImageNo(introImageNo)
-                    .introImageLocation(introImageLocation)
-                    .intro(intro)
-                    .build();
-            return introImage;
-        }
+//        public IntroImage toEntity(){
+//            IntroImage introImage = IntroImage.builder()
+//                    .introImageNo(introImageNo)
+//                    .introImageLocation(introImageLocation)
+//                    .intro(intro)
+//                    .build();
+//            return introImage;
+//        }
     }
 
     public static class Response{

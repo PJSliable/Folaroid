@@ -14,10 +14,10 @@ public class PortfolioServiceImpl implements PortfolioService{
     @Autowired
     PortfolioRepository portfolioRepository;
 
-    @Override
-    public Portfolio createPortfolio(PortfolioDto.Request portfolioRequest) {
-        return portfolioRepository.save(portfolioRequest.toEntity());
-    }
+//    @Override
+//    public Portfolio createPortfolio(PortfolioDto.Request portfolioRequest) {
+//        return portfolioRepository.save(portfolioRequest.toEntity());
+//    }
 
     @Override
     public void deletePortfolio(Long pfNo) {

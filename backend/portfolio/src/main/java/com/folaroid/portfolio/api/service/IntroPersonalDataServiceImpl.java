@@ -11,8 +11,8 @@ public class IntroPersonalDataServiceImpl implements IntroPersonalDataService{
     @Autowired
     IntroPersonalDataRepository introPersonalDataRepository;
 
-    @Override
-    public IntroPersonalData createIntroPersonalData(IntroPersonalDataDto.Request introPersonalDataRequest) {
-        return introPersonalDataRepository.save(introPersonalDataRequest.toEntity());
-    }
+//    @Override
+//    public IntroPersonalData createIntroPersonalData(IntroPersonalDataDto.Request introPersonalDataRequest) {
+//        return introPersonalDataRepository.save(introPersonalDataRequest.toEntity());
+//    }
 }

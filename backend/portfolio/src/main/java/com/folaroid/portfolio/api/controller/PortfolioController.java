@@ -25,17 +25,17 @@ public class PortfolioController {
     /**
      * 포트폴리오 제작
      */
-    @PostMapping
-    @ApiOperation(value = "포트폴리오 제작", notes = "포트폴리오 제작한다.")
-    @ApiResponses({
-            @ApiResponse(code = 200, message = "성공"),
-            @ApiResponse(code = 404, message = "없음"),
-            @ApiResponse(code = 500, message = "서버 오류")
-    })
-    public ResponseEntity createPortfolio(@RequestBody PortfolioDto.Request portfolioDtoRequest){
-        Portfolio port = portfolioService.createPortfolio(portfolioDtoRequest);
-    return  ResponseEntity.status(HttpStatus.OK).body(port);
-    }
+//    @PostMapping
+//    @ApiOperation(value = "포트폴리오 제작", notes = "포트폴리오 제작한다.")
+//    @ApiResponses({
+//            @ApiResponse(code = 200, message = "성공"),
+//            @ApiResponse(code = 404, message = "없음"),
+//            @ApiResponse(code = 500, message = "서버 오류")
+//    })
+//    public ResponseEntity createPortfolio(@RequestBody PortfolioDto.Request portfolioDtoRequest){
+//        Portfolio port = portfolioService.createPortfolio(portfolioDtoRequest);
+//    return  ResponseEntity.status(HttpStatus.OK).body(port);
+//    }
 
     /**
      * 포트폴리오 삭제

@@ -12,7 +12,6 @@ import java.sql.Date;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class User {
 
     @Id

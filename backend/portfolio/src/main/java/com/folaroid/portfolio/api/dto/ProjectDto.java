@@ -19,19 +19,19 @@ public class ProjectDto {
         private Integer pjtStar;
         private String pjtImageLocation;
 
-        public Project toEntity(){
-            Project project = Project.builder()
-                    .pjtNo(pjtNo)
-                    .portfolio(portfolio)
-                    .pjtTitle(pjtTitle)
-                    .pjtSubtitle(pjtSubTitle)
-                    .pjtUrl(pjtUrl)
-                    .pjtGithubUrl(pjtGithubUrl)
-                    .pjtStar(pjtStar)
-                    .pjtImageLocation(pjtImageLocation)
-                    .build();
-            return project;
-        }
+//        public Project toEntity(){
+//            Project project = Project.builder()
+//                    .pjtNo(pjtNo)
+//                    .portfolio(portfolio)
+//                    .pjtTitle(pjtTitle)
+//                    .pjtSubtitle(pjtSubTitle)
+//                    .pjtUrl(pjtUrl)
+//                    .pjtGithubUrl(pjtGithubUrl)
+//                    .pjtStar(pjtStar)
+//                    .pjtImageLocation(pjtImageLocation)
+//                    .build();
+//            return project;
+//        }
 
     }
     @Getter

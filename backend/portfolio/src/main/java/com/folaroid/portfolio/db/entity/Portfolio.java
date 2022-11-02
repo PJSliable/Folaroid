@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @Getter
-@Builder
 public class Portfolio {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pf_no")

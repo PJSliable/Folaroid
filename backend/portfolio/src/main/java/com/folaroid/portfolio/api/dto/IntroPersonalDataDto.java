@@ -17,17 +17,17 @@ public class IntroPersonalDataDto {
         private String personalDataPhone;
         //private Intro intro;
 
-        public IntroPersonalData toEntity(){
-            IntroPersonalData introPersonalData = IntroPersonalData.builder()
-                    .introPersonalDataNo(introPersonalDataNo)
-                    .personalDataName(personalDataName)
-                    .personalDataBirth(personaDataBirth)
-                    .personalDataEmail(personalDataEmail)
-                    .personalDataPhone(personalDataPhone)
-                    //.intro(intro)
-                    .build();
-            return introPersonalData;
-        }
+//        public IntroPersonalData toEntity(){
+//            IntroPersonalData introPersonalData = IntroPersonalData.builder()
+//                    .introPersonalDataNo(introPersonalDataNo)
+//                    .personalDataName(personalDataName)
+//                    .personalDataBirth(personaDataBirth)
+//                    .personalDataEmail(personalDataEmail)
+//                    .personalDataPhone(personalDataPhone)
+//                    //.intro(intro)
+//                    .build();
+//            return introPersonalData;
+//        }
     }
 
     @Getter

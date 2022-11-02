@@ -7,9 +7,7 @@ import lombok.*;
 
 public class IntroDto {
     @Data
-    @AllArgsConstructor
     @NoArgsConstructor
-    @Builder
     public static class Request{
         private Long introNo;
         private String introContent;
@@ -17,23 +15,22 @@ public class IntroDto {
         private Long pfNo;
         private Long portfolioTemplatesNo;
         private IntroImage introImage;
-        private IntroPersonalData introPersonalData;
+        private Long introPersonalDataNo;
 
         public Intro toEntity(){
             Intro intro = Intro.builder()
-                    .introNo(introNo)
                     .introContent(introContent)
                     .userNo(userNo)
                     .pfNo(pfNo)
-                    .portfolioTemplatesNo(portfolioTemplatesNo)
                     .introImage(introImage)
-                    .introPersonalData(introPersonalData)
+                    .introPersonalDataNo(introPersonalDataNo)
                     .build();
             return intro;
         }
     }
 
-    @Getter
+    @Data
+    @NoArgsConstructor
     public static class Response{
         private Long introNo;
         private String introContent;
@@ -41,16 +38,15 @@ public class IntroDto {
         private Long pfNo;
         private Long portfolioTemplatesNo;
         private IntroImage introImage;
-        private IntroPersonalData introPersonalData;
+        private Long introPersonalDataNo;
 
         public Response(Intro intro){
             this.introNo = intro.getIntroNo();
             this.introContent = intro.getIntroContent();
             this.userNo = intro.getUserNo();
             this.pfNo = intro.getPfNo();
-            this.portfolioTemplatesNo = intro.getPortfolioTemplatesNo();
             this.introImage = intro.getIntroImage();
-            this.introPersonalData = intro.getIntroPersonalData();
+            this.introPersonalDataNo = intro.getIntroPersonalDataNo();
         }
     }
 }

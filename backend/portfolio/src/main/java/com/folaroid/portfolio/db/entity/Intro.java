@@ -12,9 +12,7 @@ import static javax.persistence.FetchType.LAZY;
 
 @Entity
 @Getter
-@Builder
 @NoArgsConstructor
-@AllArgsConstructor
 public class Intro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,15 +25,11 @@ public class Intro {
 
     private Long pfNo;
 
-    private Long portfolioTemplatesNo;
-
     @OneToOne(fetch = LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "intro_image_no")
     private IntroImage introImage;
 
-    @OneToOne(fetch = LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "intro_personal_data_no")
-    private IntroPersonalData introPersonalData;
+    private Long introPersonalDataNo;
 
 //    @OneToMany(mappedBy = "intro")
 //    private List<IntroStack> introStacks = new ArrayList<>();
@@ -46,4 +40,14 @@ public class Intro {
     public void SaveDefaultUserInfo(long userNo) {
         this.userNo = userNo;
     }
+
+    @Builder
+    public Intro(String introContent, Long userNo, Long pfNo, IntroImage introImage, Long introPersonalDataNo) {
+        this.introContent = introContent;
+        this.userNo = userNo;
+        this.pfNo = pfNo;
+        this.introImage = introImage;
+        this.introPersonalDataNo = introPersonalDataNo;
+    }
+
 }

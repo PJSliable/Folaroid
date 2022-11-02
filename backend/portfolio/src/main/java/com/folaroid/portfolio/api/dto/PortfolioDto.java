@@ -19,18 +19,18 @@ public class PortfolioDto {
         //private PortfolioTemplates portfolioTemplates;
         private String pfImageLocation;
 
-        public Portfolio toEntity(){
-            Portfolio portfolio = Portfolio.builder()
-                    .pfNo(pfNo)
-                    .userNo(userNo)
-                    .pfPrivacy(pfPrivacy)
-                    .updatedAt(updatedAt)
-                    //.portfolioTemplates(portfolioTemplates)
-                    .portfolioTemplatesNo(portfolioTemplatesNo)
-                    .pfImageLocation(pfImageLocation)
-                    .build();
-            return portfolio;
-        }
+//        public Portfolio toEntity(){
+//            Portfolio portfolio = Portfolio.builder()
+//                    .pfNo(pfNo)
+//                    .userNo(userNo)
+//                    .pfPrivacy(pfPrivacy)
+//                    .updatedAt(updatedAt)
+//                    //.portfolioTemplates(portfolioTemplates)
+//                    .portfolioTemplatesNo(portfolioTemplatesNo)
+//                    .pfImageLocation(pfImageLocation)
+//                    .build();
+//            return portfolio;
+//        }
     }
 
     @Getter

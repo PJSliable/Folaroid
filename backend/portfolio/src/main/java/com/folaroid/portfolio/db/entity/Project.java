@@ -11,7 +11,6 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Getter
-@Builder
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

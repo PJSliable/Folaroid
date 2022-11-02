@@ -1,7 +1,7 @@
 package com.folaroid.portfolio.api.controller;
 
-import com.folaroid.portfolio.api.dto.IntroLanguageDto;
-import com.folaroid.portfolio.api.dto.IntroStackDto;
+import com.folaroid.portfolio.api.dto.IntroLanguageDetailDto;
+import com.folaroid.portfolio.api.dto.IntroLanguageNoDto;
 import com.folaroid.portfolio.api.service.IntroLanguageService;
 import com.folaroid.portfolio.db.entity.IntroLanguage;
 import io.swagger.annotations.Api;
@@ -20,10 +20,10 @@ public class IntroLanguageController {
     private final IntroLanguageService introLanguageService;
 
     @ApiOperation(value = "마이페이지 - 공인 어학성적",
-            notes="등록",
+            notes="등록. request에서 languageDate의 형식이 2016-11-22가 되어야 함",
             httpMethod = "POST")
     @PostMapping("/mypage/intro_language")
-    public ResponseEntity<Long> save(@RequestBody IntroLanguageDto.IntroLanguageDetail request){
+    public ResponseEntity<Long> save(@RequestBody IntroLanguageDetailDto request){
         Long introLanguageNo = introLanguageService.save(request);
         return new ResponseEntity<>(introLanguageNo, HttpStatus.OK);
     }
@@ -32,7 +32,7 @@ public class IntroLanguageController {
             notes="조회",
             httpMethod = "GET")
     @GetMapping("/mypage/intro_language")
-    public ResponseEntity<IntroLanguage> find(@RequestBody IntroLanguageDto.IntroLanguageNo request){
+    public ResponseEntity<IntroLanguage> find(@RequestBody IntroLanguageNoDto request){
         IntroLanguage introLanguage = introLanguageService.find(request);
         return new ResponseEntity<>(introLanguage, HttpStatus.OK);
     }
@@ -41,7 +41,7 @@ public class IntroLanguageController {
             notes="삭제",
             httpMethod = "DELETE")
     @DeleteMapping("/mypage/intro_language")
-    public ResponseEntity<Long> delete(@RequestBody IntroLanguageDto.IntroLanguageNo request){
+    public ResponseEntity<Long> delete(@RequestBody IntroLanguageNoDto request){
         introLanguageService.delete(request.getIntroLanguageNo());
         return new ResponseEntity<>(request.getIntroLanguageNo(), HttpStatus.OK);
     }
