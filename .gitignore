@@ -7,6 +7,9 @@
 application-security.properties
 build/
 
+#Python
+venv/
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
